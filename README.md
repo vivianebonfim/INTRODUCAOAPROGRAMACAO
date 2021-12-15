@@ -1,5 +1,5 @@
-# INTRODUCAOAPROGRAMACAO
-Introdução à Programação de Computadores para Pessoas com Deficiência Visual.
+# Introdução à Programação de Computadores para Pessoas com Deficiência Visual.
+
 Este trabalho foi desenvolvido como atividade de extensão da mátéria de Acessibilidade e Inclusão Digital ministrada na UTFPR em 2021.
  
 Coordenador: Leonelo Dell Anhol Almeida</p
