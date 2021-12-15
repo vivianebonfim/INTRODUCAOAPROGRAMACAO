@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+	<meta charset="UTF-8">
+    <title>INTRODUÇÃO À PROGRAMAÇÃO</title>
+  </head>
+  <body>
+    <p>
+      Este material apresenta conceitos iniciais que servem de base para a
+      programação em qualquer linguagem. Você vai poder acompanhar alguns
+      exemplos nas linguagens C e JavaScript, estas linguagens têm palavras de
+      comando específicas que devem ser escritas corretamente, então faremos um
+      soletrando antes de utilizá-las. Não se desespere, você encontrará breves
+      seções com explicações de temas introdutórios e exemplos. No final você
+      também encontra sugestões de atividades para você treinar. Os exemplos 
+      e atividades serão primeiro apresentados de forma amigável ao leitor de
+      telas 
+    </p>
+    <p>
+      A seguir temos um menu com os diversos tópicos que serão abordados nesse
+      material, se você desejar pode navegar pelo conteúdo através dele. Ou se
+      preferir, é só seguir o texto da página sequencialmente. O texto começa
+      após o menu!
+    </p>
+	<p>Bons estudos!!!</p>
+    <a id="MENU">MENU</a>
+    <ol start="1">
+	  <li><a href="#ÍNDICE_DE_PALAVRAS">ÍNDICE DE PALAVRAS</a></li>
+      <li><a href="#O_QUE_É_UM_ALGORITMO?">O QUE É UM ALGORITMO?</a></li>
+      <li><a href="#VARIÁVEIS_E_EXPRESSÕES">VARIÁVEIS E EXPRESSÕES</a>
+		<ol start="1">
+			<li><a href="#VARIÁVEIS">VARIÁVEIS</a></li>
+			<li><a href="#CONSTANTES">CONSTANTES</a></li>
+			<li>
+			  <a href="#DECLARAÇÃO_DE_VARIÁVEIS_E_ATRIBUIÇÃO_DE_VALORES_À_VARIÁVEIS"
+				>DECLARAÇÃO DE VARIÁVEIS E ATRIBUIÇÃO DE VALORES À VARIÁVEIS</a
+			  >
+			</li>
+			<li><a href="#OPERADORES">OPERADORES</a></li>
+			<li>
+			  <a href="#EXEMPLOS_DE_DECLARAÇÃO_DE_VARIÁVEIS_EM_LINGUAGEM_C"
+				>EXEMPLOS DE DECLARAÇÃO DE VARIÁVEIS EM LINGUAGEM C</a
+			  >
+			</li>
+			<li>
+			  <a href="#EXEMPLOS_DE_UTILIZAÇÃO_DE_OPERADORES_EM_LINGUAGEM_C"
+				>EXEMPLOS DE UTILIZAÇÃO DE OPERADORES EM LINGUAGEM C</a>
+			</li>
+			<li>
+			  <a href="#EXEMPLOS_DE_CONSTANTES_NA_LINGUAGEM_C"
+				>EXEMPLOS DE CONSTANTES NA LINGUAGEM C</a 	
+			  >
+			</li>
+			<li>
+			  <a href="#EXEMPLOS_DE_DECLARAÇÃO_DE_VARIÁVEIS_EM_JAVASCRIPT"
+				>EXEMPLOS DE DECLARAÇÃO DE VARIÁVEIS EM JAVASCRIPT</a          >
+			</li>
+			<li>
+			  <a href="#EXEMPLOS_DE_UTILIZAÇÃO_DE_OPERADORES_EM_JAVASCRIPT"
+				>EXEMPLOS DE UTILIZAÇÃO DE OPERADORES EM JAVASCRIPT</a
+			  >
+			</li>
+			<li>
+			  <a href="#EXEMPLOS_DE_CONSTANTES_NA_LINGUAGEM_JAVASCRIPT"
+				>EXEMPLOS DE CONSTANTES NA LINGUAGEM JAVASCRIPT</a
+			  >
+			</li>
+			<li>
+			  <a href="#IMPRIMINDO_DADOS_-_A_FUNÇÃO_PRINTF_NA_LINGUAGEM_C"
+				>IMPRIMINDO DADOS - A FUNÇÃO PRINTF NA LINGUAGEM C</a
+			  >
+			</li>
+		</ol>
+	  </li>
+      <li><a href="#ESTRUTURAS_CONDICIONAIS">ESTRUTURAS CONDICIONAIS</a>
+      <ol start="1">
+        <li>
+          <a href="#A_ESTRUTURA_CONDICIONAL_IF">A ESTRUTURA CONDICIONAL If</a>
+        </li>
+        <li>
+          <a href="#A_ESTRUTURA_CONDICIONAL_SWITCH_CASE"
+            >A ESTRUTURA CONDICIONAL SWITCH CASE</a
+          >
+        </li>
+        <li>
+          <a href="#EXEMPLOS_DE_ESTRUTURAS_CONDICIONAIS"
+            >EXEMPLOS DE ESTRUTURAS CONDICIONAIS</a
+          >
+        </li>
+      </ol>
+	  </li>
+      <li><a href="#ESTRUTURAS_DE_REPETIÇÃO">ESTRUTURAS DE REPETIÇÃO</a>
+		  <ol start="1">
+			<li><a href="#While">While</a></li>
+			<li><a href="#FOR">FOR</a></li>
+			<li>
+			  <a href="#RESUMO_DE_ESTRUTURAS_DE_REPETIÇÃO"
+				>RESUMO DE ESTRUTURAS DE REPETIÇÃO</a
+			  >
+			</li>
+			<li>
+			  <a href="#EXEMPLOS_DE_ESTRUTURAS_DE_REPETIÇÃO_EM_LINGUAGEM_C"
+				>EXEMPLOS DE ESTRUTURAS DE REPETIÇÃO EM LINGUAGEM C</a
+			  >
+			</li>
+			<li>
+			  <a href="#EXEMPLOS_DE_ESTRUTURAS_DE_REPETIÇÃO_EM_LINGUAGEM_JAVASCRIPT"
+				>EXEMPLOS DE ESTRUTURAS DE REPETIÇÃO EM LINGUAGEM JAVASCRIPT</a
+			  >
+			</li>
+		  </ol>
+	  </li>
+      <li>
+        <a href="#MÃOS_À_MASSA,_OU_MELHOR,_MÃOS_NO_CÓDIGO"
+          >MÃOS À MASSA, OU MELHOR, MÃOS NO CÓDIGO</a
+        >
+      </li>
+      <li>
+        <a href="#VAMOS_TREINAR_UM_POUCO_MAIS?">VAMOS TREINAR UM POUCO MAIS?</a>
+      
+      <ol start="1">
+        <li><a href="#EXERCÍCIO_1">EXERCÍCIO 1</a></li>
+        <li><a href="#EXERCÍCIO_2">EXERCÍCIO 2</a></li>
+        <li><a href="#EXERCÍCIO_3">EXERCÍCIO 3</a></li>
+        <li><a href="#EXERCÍCIO_4">EXERCÍCIO 4</a></li>
+        <li><a href="#RESPOSTAS">RESPOSTAS</a>
+        <ol start="1">
+          <li><a href="#RESPOSTA_EXERCÍCIO_2">RESPOSTA EXERCÍCIO 2</a></li>
+          <li><a href="#RESPOSTA_EXERCÍCIO_3">RESPOSTA EXERCÍCIO 3</a></li>
+          <li><a href="#RESPOSTA_EXERCÍCIO_4">RESPOSTA EXERCÍCIO 4</a></li>
+        </ol>
+		</li>
+      </ol>
+	</li>
+   </ol>
+
+	<h1><a id="ÍNDICE_DE_PALAVRAS">ÍNDICE DE PALAVRAS</a></h1>
+	<p>Criamos uma lista de palavras que possivelmente são lidas de forma errada ou estranha pelo narrador durante o texto, visto que em programação, é comum usarmos termos em português e inglês ao mesmo tempo. Na lista a seguir, a pronúncia mais amigável e aportuguesada é dita primeiro e, após o sinal de igual, o modo que o narrador lerá:</p>
+  <p>Início do índice</p>
+  <p>java iscrípiti = JavaScript, soletrando J,A,V,A,S,C,R,I,P,T</p>
+	<p>réxi tégui = hashtag, soletrando H,A,S,H,T,A,G</p>
+	<p>declarar = declare, soletrando D,E,C,L,A,R,E</p>
+	<p>brêique = break, soletrando B,R,E,A,K</p>
+	<p>faulse = false, soletrando F,A,L,S,E</p>
+	<p>dobou = double, soletrando D,O,U,B,L,E</p>
+	<p>xar = char, soletrando C,H,A,R</p>
+	<p>páipe = pipe, soletrando P,I,P,E</p>
+	<p>suite = switch, soletrando S,W,I,T,C,H</p>
+	<p>quêise = case, soletrando C,A,S,E</p>
+	<p>fór = for, soletrando F,O,R</p>
+	<p>uaile = while, soletrando W,H,I,L,E</p>
+	<p>mêin = main, soletrando M,A,I,N</p>
+	<p>Fim do índice.</p>
+
+    <h1><a id="O_QUE_É_UM_ALGORITMO?">O QUE É UM ALGORITMO?</a></h1>
+    <p>
+      Assim como uma receita de miojo, um algoritmo é um conjunto de instruções
+      lógicas a fim de chegar a um objetivo. Isso mesmo, receita de miojo é um
+      típico algoritmo, na vida real, que contém todos os elementos e
+      passo-a-passo necessários para preparar um miojo. Tal como acontece com a
+      preparação de um miojo na vida real, veremos que em programação também
+      temos o que chamamos de variáveis, que são elementos necessários, e certas
+      instruções lógicas. É isso que usamos, numa determinada ordem, para
+      conseguir executar uma determinada ação no dispositivo.
+    </p>
+    <p>
+      Em outras palavras, a lógica de programação é o raciocínio que orienta o
+      encadeamento de instruções em uma sequência coerente, para que seja
+      possível atingir um objetivo. O encadeamento de instruções dá origem a um
+      algoritmo, este algoritmo deve servir para algum propósito, realizar uma
+      tarefa, como por exemplo verificar qual o maior valor entre uma sequência
+      de números, ou ordenar uma lista de nomes. Um algoritmo pode ser uma
+      sequência simples ou complexa de instruções, tudo vai depender do problema
+      que você está tentando resolver.
+    </p>
+
+    <!-- VARIÁVEIS E EXPRESSÕES -->
+    <h1><a id="VARIÁVEIS_E_EXPRESSÕES">VARIÁVEIS E EXPRESSÕES</a></h1>
+    <!-- VARIÁVEIS -->
+    <h2><a id="VARIÁVEIS">VARIÁVEIS</a></h2>
+    <p>
+      Uma variável é uma forma para salvar dados que possam ser acessados e
+      manipulados durante a execução do algoritmo. Ela é caracterizada por uma
+      identificação, que é o nome da variável, um endereço de memória, um tipo,
+      um tamanho, e o conteúdo.
+    </p>
+    <p>
+      Para definir o nome de sua variável, existem algumas regras e boas
+      práticas que devem ser seguidas: deve conter um ou mais caracteres; você
+      pode utilizar números, desde que não seja no primeiro caractere do nome;
+      não pode haver espaços em branco na declaração do nome da variável; apesar
+      de algumas linguagens aceitarem caracteres especiais, é uma boa prática
+      não utilizá-los, o único caractere especial que é usual nos nomes é o
+      sublinhado (underline).
+    </p>
+    <p>
+      Outra boa prática para nomes de variáveis que você pode adotar desde o
+      início é dar um nome que faça sentido, que tenha relação com o conteúdo,
+      para tornar mais fácil a leitura e interpretação do código. Por exemplo,
+      se você tem uma variável que contém a quantidade de dias, em vez de
+      nomeá-la como variável "x" ou um nome genérico qualquer, você pode
+      chamá-la de "quantidade_dias" ou "qtdDias", que são nomes de variável que
+      trazem uma ideia da utilidade e conteúdo.
+    </p>
+    <p>
+      Cada variável tem um tipo de dado que se adapta melhor para a função que
+      ela pretende cumprir no algoritmo. Cada linguagem de programação tem sua
+      própria forma de entender e declarar o tipo de uma variável. No caso do
+      JavaScript, a forma que a variável é preenchida determina qual o tipo. Já
+      no caso da linguagem C, é necessário declarar na criação da variável qual
+      será o tipo.
+    </p>
+    <p>
+      Existem 3 tipos principais de dados: numéricos, caracteres e lógicos. O
+      tipo “numérico” compreende números reais: inteiros ou decimais, positivos
+      ou negativos.
+    </p>
+    <p>
+      Variáveis que serão utilizadas em cálculos aritméticos, devem ser
+      numéricas. No JavaScript basta preencher a variável com um número. Já na
+      linguagem de programação C, é necessário definir se a variável consiste de
+      número inteiro ou decimal, para fazer esta separação existem os tipos
+      “int”, para inteiros, e “float” ou “double”, para decimais.
+    </p>
+    <p>
+      O tipo “caractere” compreende uma sequência de uma ou mais letras, números
+      e símbolos, e deve sempre ser preenchido com o conteúdo entre aspas. No
+      JavaScript, para uma variável ser entendida como caractere, basta
+      preencher a variável com um valor entre aspas. Já na linguagem C, usamos o
+      tipo “char” para definir que uma variável é caractere.
+    </p>
+    <p>
+      O tipo lógico compreende os valores lógicos verdadeiro ou falso. Esse tipo
+      é chamado de booleano. No JavaScript, para que uma variável seja booleana,
+      basta preencher com o valor “true” ou “false”, sem aspas que significam
+      literalmente verdadeiro e falso, respectivamente. Já na linguagem C,
+      devemos declarar a variável com o tipo “bool” e então o seu conteúdo com
+      true ou false. Na linguagem C, variáveis do tipo inteiro podem ser usadas
+      como variáveis lógicas. Usando o valor 0 para indicar falso e outros
+      valores para indicar verdadeiro.
+    </p>
+
+    <!-- CONSTANTES -->
+    <h2><a id="CONSTANTES">CONSTANTES</a></h2>
+    <p>
+      Uma constante é um registro na memória cujo valor não muda ao longo da
+      execução do programa. Por exemplo, o valor de Pi é uma constante pois é
+      sempre o mesmo (3,1415...).
+    </p>
+    <p>
+      Constante referem-se a valores fixos que o programa não pode alterar.
+      Podem ser de qualquer tipo.
+    </p>
+
+    <!-- DECLARAÇÃO DE VARIÁVEIS E ATRIBUIÇÃO DE VALORES À VARIÁVEIS -->
+    <h2>
+      <a id="DECLARAÇÃO_DE_VARIÁVEIS_E_ATRIBUIÇÃO_DE_VALORES_À_VARIÁVEIS">
+        DECLARAÇÃO DE VARIÁVEIS E ATRIBUIÇÃO DE VALORES À VARIÁVEIS
+      </a>
+    </h2>
+    <p>
+      Para que uma variável possa ser utilizada em um programa em C ou
+      JavaScript, ela deve primeiro ser declarada, para que seja reservado
+      espaço na memória para armazenamento de seus dados. Uma boa prática é
+      declarar variáveis no início do programa (mas em alguns casos elas podem
+      ser declaradas em outras partes do programa). Você pode declarar uma
+      variável e atribuir um valor inicial a ela na mesma linha de código, isto
+      também é uma boa prática.
+    </p>
+    <p>
+      Então você declara o tipo da variável seguido do nome que dará a ela, o
+      sinal de igual e o seu valor inicial. Note que aqui estamos falando do
+      sinal de igual, e isso é algo importante em programação: o sinal de igual
+      pode ser entendido como “recebe”, ou seja, o sinal de igual é o sinal
+      utilizado para atribuição de valor. Vamos ver um pouco mais sobre isso na
+      seção de operadores.
+    </p>
+
+    <!-- OPERADORES -->
+    <h2><a id="OPERADORES">OPERADORES</a></h2>
+    <p>
+      Operadores são caracteres reservados da linguagem, símbolos que
+      representam ações específicas. Para realizar adição e subtração você
+      utiliza os sinais convencionais de mais e menos, para multiplicação deve
+      utilizar o asterisco e para divisão utilize uma barra simples. Há ainda
+      como realizar uma operação que retorna o resto de uma divisão, também
+      chamada de módulo e para fazer esta operação você deve utilizar o sinal de
+      porcentagem. Dois sinais de adição seguidos indicam uma operação de
+      incremento à variável, ou seja, soma-se um ao valor original. O decremento
+      pode ser feito de maneira análoga com dois sinais de subtração seguidos.
+    </p>
+    <p>
+      Há operadores especiais para determinar relações de comparação entre
+      variáveis. Você pode querer saber se uma variável é igual a outra ou se é
+      maior, menor, diferente. Para isso existem caracteres reservados em cada
+      linguagem, de modo geral os sinais de maior, menor, maior ou igual, menor
+      ou igual são utilizados nas linguagens de programação.
+    </p>
+    <p>
+      Para fazer uma comparação de igualdade, utilize dois sinais de igual
+      juntos, porque apenas um sinal de igual indica atribuição de valor,
+      lembra? Quando falamos no começo sobre declaração de variáveis e
+      atribuição de valores, falamos que você deveria utilizar um sinal de
+      igual. Então, para fazer comparações você deve utilizar dois sinais de
+      igual para não confundir seu compilador. O compilador é a parte que
+      interpreta seu código e faz com que ele possa ser executado pelo
+      computador, desde que você tenha escrito corretamente. Para verificar uma
+      diferença entre duas variáveis você deve utilizar um ponto de exclamação
+      seguido de um sinal de igual, isso para o computador é o operador de
+      diferença.
+    </p>
+    <p>
+      Existem ainda os operadores lógicos, que servem para verificar condições
+      de acordo com lógica. Lógica também é assunto para outro material, mas é
+      importante conhecer os operadores. Utilizamos dois símbolos de pipe juntos
+      para determinar uma condição 'ou', por exemplo, chuva ou sol, seria
+      escrito como 'chuva pipe pipe sol'.
+    </p>
+    <p>
+      Você deve utilizar dois símbolos ecomercial juntos para representar uma
+      condição 'E', por exemplo, chuva E frio seria representado por 'chuva
+      ecomercial ecomercial frio'. Você pode simplesmente negar alguma variável
+      também, apenas utilizando um ponto de exclamação antes da variável em
+      questão. Isso será útil quando começar a brincar com estruturas
+      condicionais e estruturas de repetição que verá adiante.
+    </p>
+
+    <!-- EXEMPLOS DE DECLARAÇÃO DE VARIÁVEIS EM LINGUAGEM C -->
+    <h2>
+      <a id="EXEMPLOS_DE_DECLARAÇÃO_DE_VARIÁVEIS_EM_LINGUAGEM_C">
+        EXEMPLOS DE DECLARAÇÃO DE VARIÁVEIS EM LINGUAGEM C
+      </a>
+    </h2>
+    <p>
+      Declare o tipo da variável seguido do nome e atribuição do valor, veja
+      exemplos:
+    </p>
+    <p>- Tipo inteiro, soletrando o tipo int: I. N. T:</p>
+    <p>Exemplo. int num = 1. ponto e vírgula.</p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo inteiro, com o nome
+      num e, logo em seguida, atribuindo a ela o valor 1.
+    </p>
+    <p>Exemplo. int numero = 100. ponto e vírgula.</p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo inteiro, com o nome
+      número e, logo em seguida, atribuindo a ela o valor 100.
+    </p>
+    <p>- Tipo decimal, soletrando o tipo float: F. L. O. A. T:</p>
+    <p>Exemplo. float dec = 1.1. ponto e vírgula.</p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo decimal, com o nome
+      dec e, logo em seguida, atribuindo a ela o valor 1,1.
+    </p>
+    <p>Exemplo. float decimal = 99.9. ponto e vírgula.</p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo decimal, com o nome
+      dec e, logo em seguida, atribuindo a ela o valor 99.9.
+    </p>
+    <p>- Tipo caractere, soletrando o tipo char: C. H. A. R:</p>
+    <p>
+      Exemplo. char letra = abre aspas simples. A. fecha aspas simples. ponto e
+      vírgula.
+    </p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo caractere, com o
+      nome letra e, logo em seguida, atribuindo à ela o caractere A.
+    </p>
+    <p>
+      Exemplo. char palavra. abre colchete. quatro. fecha colchete. igual. abre
+      aspas duplas. casa. fecha aspas duplas. ponto e vírgula.
+    </p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo caractere, com 4
+      caracteres, com o nome palavra e, logo em seguida, atribuindo a ela os
+      caracteres C. A. S. A.
+    </p>
+    <p>- Tipo booleano, soletrando o tipo bool: B. dois Ós. L:</p>
+    <p>
+      Exemplo. bool T = true, ponto e vírgula. comentário. É necessário incluir
+      uma biblioteca no início do código com a seguinte linha de comando:
+      hashtag. include. sinal de menor que. S. T. D. B. dois Ós. L. ponto H.
+      sinal de maior que.
+    </p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo bool, com o nome T
+      e, logo em seguida, atribuindo a ela o valor verdadeiro.
+    </p>
+    <p>Exemplo. bool F = false, ponto e vírgula.</p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo bool, com o nome f
+      e, logo em seguida, atribuindo a ela o valor falso.
+    </p>
+
+    <!-- EXEMPLOS DE UTILIZAÇÃO DE OPERADORES EM LINGUAGEM C -->
+    <h2>
+      <a id="EXEMPLOS_DE_UTILIZAÇÃO_DE_OPERADORES_EM_LINGUAGEM_C">
+        EXEMPLOS DE UTILIZAÇÃO DE OPERADORES EM LINGUAGEM C
+      </a>
+    </h2>
+    <p>
+      Somando duas variáveis já criadas no exemplo anterior e assumindo que as
+      variáveis são atualizadas em cada comando.
+    </p>
+    <p>Exemplo. num = num. símbolo de mais. numero. ponto e vírgula.</p>
+    <p>
+      A variável num armazenava o valor 1 e variável numero armazenava o valor
+      100. A partir desta linha a variável num armazena a soma das duas, ou
+      seja, variável num armazena o valor 101.
+    </p>
+    <p>Exemplo. dec = decimal. símbolo de menos. dec. ponto e vírgula.</p>
+    <p>
+      A variável dec armazenava o valor 1.1 e a variável decimal armazenava o
+      valor 99.9. A partir desta linha a variável dec armazena o valor 98.8.
+    </p>
+    <p>Exemplo. num = num / 2. ponto e vírgula.</p>
+    <p>
+      A variável num armazenava o valor 101. A partir daqui ela armazena a
+      divisão inteira de 101 por 2, que é igual a 50. A variável num armazena o
+      valor 50.
+    </p>
+    <p>Exemplo. num = num % 2. ponto e vírgula.</p>
+    <p>
+      A variável num armazenava o valor 50. A partir desta linha ela armazena o
+      resto da divisão de 50 por 2, que é 0 pois se trata de uma divisão sem
+      restos.
+    </p>
+    <p>A variável num armazena o valor 0.</p>
+
+    <!-- EXEMPLOS DE CONSTANTES NA LINGUAGEM C -->
+    <h2>
+      <a id="EXEMPLOS_DE_CONSTANTES_NA_LINGUAGEM_C">
+        EXEMPLOS DE CONSTANTES NA LINGUAGEM C
+      </a>
+    </h2>
+    <p>Soletrando define: D. E. F. I. N. E.</p>
+    <p>
+      hashtag define JUROS 0.18. ponto e vírgula. (declaração de uma constante,
+      chamada JUROS, com valor fixo de 0.18)
+    </p>
+    <p>
+      hashtag define MAX 100. ponto e vírgula. (declaração de uma constante,
+      chamada MAX, com valor fixo de 100)
+    </p>
+    <p>
+      hashtag define ERRO abre aspas duplas. Erro. fecha aspas duplas. ponto e
+      vírgula. (declaração de uma constante, chamada ERRO, com conteúdo fixo de
+      Erro)
+    </p>
+
+    <!-- EXEMPLOS DE DECLARAÇÃO DE VARIÁVEIS EM JAVASCRIPT -->
+    <h2>
+      <a id="EXEMPLOS_DE_DECLARAÇÃO_DE_VARIÁVEIS_EM_JAVASCRIPT">
+        EXEMPLOS DE DECLARAÇÃO DE VARIÁVEIS EM JAVASCRIPT
+      </a>
+    </h2>
+    <p>Soletrando var: V. A. R.</p>
+    <p>- Tipo inteiro:</p>
+    <p>Exemplo. var num = 1. ponto e vírgula.</p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo numérico, com o
+      nome num e, logo em seguida, atribuindo a ela o valor 1.
+    </p>
+    <p>Exemplo. var numero = 100. ponto e vírgula.</p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo numérico, com o
+      nome numero e, logo em seguida, atribuindo a ela o valor 100.
+    </p>
+    <p>- Tipo decimal:</p>
+    <p>Exemplo. var dec = 1.1. ponto e vírgula.</p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo decimal, com o nome
+      dec e, logo em seguida, atribuindo a ela o valor 1.1.
+    </p>
+    <p>Exemplo. var decimal = 99.9. ponto e vírgula</p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo decimal, com o nome
+      decimal e, logo em seguida, atribuindo a ela o valor 99.9.
+    </p>
+    <p>- Tipo caractere:</p>
+    <p>
+      Exemplo. var letra = abre aspas duplas. A. fecha aspas duplas. ponto e
+      vírgula. comentário. você pode usar aspas simples ou duplas.
+    </p>
+
+    <p>
+      Nesta instrução você está criando uma variável do tipo caractere, com o
+      nome letra e, logo em seguida, atribuindo a ela o caractere A.
+    </p>
+    <p>
+      Exemplo. var palavra = abre aspas duplas. casa. fecha aspas duplas. ponto
+      e vírgula. comentário. você pode usar aspas simples ou duplas.
+    </p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo var, com o nome
+      palavra e, logo em seguida, atribuindo a ela os caracteres casa.
+    </p>
+    <p>- Tipo booleano:</p>
+    <p>Exemplo. var t = true ponto e vírgula.</p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo booleano, com o
+      nome t e, logo em seguida, atribuindo a ela o valor verdadeiro.
+    </p>
+    <p>Exemplo. var f = false ponto e vírgula.</p>
+    <p>
+      Nesta instrução você está criando uma variável do tipo booleano, com o
+      nome f e, logo em seguida, atribuindo a ela o valor falso.
+    </p>
+
+    <!-- EXEMPLOS DE UTILIZAÇÃO DE OPERADORES EM JAVASCRIPT -->
+    <h2>
+      <a id="EXEMPLOS_DE_UTILIZAÇÃO_DE_OPERADORES_EM_JAVASCRIPT">
+        EXEMPLOS DE UTILIZAÇÃO DE OPERADORES EM JAVASCRIPT
+      </a>
+    </h2>
+    <p>
+      Somando duas variáveis já criadas no exemplo anterior e assumindo que as
+      variáveis são atualizadas em cada comando.
+    </p>
+    <p>Exemplo. num = num. sinal de mais. numero. ponto e vírgula.</p>
+    <p>
+      A variável num armazenava o valor 1 e a variável numero armazenava o valor
+      100. A partir desta linha a variável num armazena a soma das duas, ou
+      seja, variável num armazena o valor 101.
+    </p>
+    <p>Exemplo. dec = decimal. sinal de menos. dec. ponto e vírgula.</p>
+    <p>
+      A variável dec armazenava o valor 1.1 e a variável decimal armazenava o
+      valor 99.9. A partir desta linha a variável dec armazena o valor 98.8.
+    </p>
+    <p>Exemplo. num = num. barra. dois. ponto e vírgula.</p>
+    <p>
+      A variável num armazenava o valor 101. A partir daqui ela armazena a
+      divisão de 101 por 2, e diferente da linguagem C aqui o JavaScript retorna
+      o valor mesmo com vírgula, um resultado decimal que é igual a 50.5. A
+      variável num armazena o valor 50.5.
+    </p>
+    <p>Exemplo. num = num % 2. ponto e vírgula.</p>
+    <p>
+      A variável num armazenava o valor 50.5. A partir desta linha ela armazena
+      o resto da divisão de 50.5 por 2, que é 0.5, pois se trata de uma divisão
+      com resto.
+    </p>
+    <p>A variável num armazena o valor 0.5.</p>
+
+    <!-- EXEMPLOS DE CONSTANTES NA LINGUAGEM JAVASCRIPT -->
+    <h2>
+      <a id="EXEMPLOS_DE_CONSTANTES_NA_LINGUAGEM_JAVASCRIPT">
+        EXEMPLOS DE CONSTANTES NA LINGUAGEM JAVASCRIPT
+      </a>
+    </h2>
+    <p>Soletrando const: C. O. N. S. T.</p>
+    <p>Exemplo. const ano = 2021 ponto e vírgula.</p>
+    <p>
+      Neste exemplo, criou-se uma constante com o nome ano e foi atribuído a ela
+      o valor 2021.
+    </p>
+    <p>Exemplo. const MAX = 100. ponto e vírgula.</p>
+    <p>
+      Neste exemplo, criou-se uma constante com o nome MAX e foi atribuído a ela
+      o valor 100.
+    </p>
+    <p>Exemplo. const juros = 0.18. ponto e vírgula.</p>
+    <p>
+      Neste exemplo, criou-se uma constante com o nome juros e foi atribuído a
+      ela o valor 0.18.
+    </p>
+
+    <!-- IMPRIMINDO DADOS - A FUNÇÃO PRINTF NA LINGUAGEM C -->
+    <h2>
+      <a id="IMPRIMINDO_DADOS_-_A_FUNÇÃO_PRINTF_NA_LINGUAGEM_C">
+        IMPRIMINDO DADOS - A FUNÇÃO PRINTF NA LINGUAGEM C
+      </a>
+    </h2>
+    <p>
+      A função print F, (soletrando P. R. I. N. T. F.) é uma função pré-definida
+      da linguagem C, ou, usando os jargões exatos, a função print F é parte de
+      um conjunto de funções pré-definidas armazenadas em uma biblioteca padrão
+      de rotinas da linguagem C.
+    </p>
+    <p>
+      A função print F permite apresentar na tela os valores de qualquer tipo de
+      dado. Ao longo do material teremos mais exemplos do uso da função print F,
+      mas achamos conveniente falar aqui, na seção de variáveis, sobre escrever
+      corretamente o argumento dessa função para diferentes tipos de variáveis.
+    </p>
+    <p>
+      Vamos direto com um exemplo, no qual teremos uma variável int dia_de_hoje
+      que recebe e armazena o valor 7, e queremos imprimir na tela o seguinte:
+      “O dia de hoje é”, seguido pelo dado que a variável int dia_de_hoje está
+      armazenando:
+    </p>
+    <p>Início do exemplo.</p>
+    <p>int dia_de_hoje = 7. ponto e vírgula.</p>
+    <p>
+      printf. abre parênteses. Abre aspas duplas. O dia de hoje é. %. d. fecha
+      aspas duplas. vírgula. sinal de ecomercial. dia_de_hoje. fecha parênteses.
+      ponto e vírgula.
+    </p>
+    <p>Fim do exemplo.</p>
+    <p>
+      Resultado: Executando isso, seria impresso na tela o seguinte: “O dia de
+      hoje é 7”.
+    </p>
+    <p>
+      Você deve estar se perguntando: o que significa este %d? Ele é chamado de
+      sequência de conversão, e a letra depois do sinal de porcentagem muda
+      dependendo do tipo de variável que deseja ser representada na tela.
+    </p>
+    <p>
+      Vamos a uma lista das principais sequências de conversão para variáveis:
+    </p>
+    <ul>
+      <li>
+        %d: imprime o conteúdo da variável com representação decimal com sinal,
+        em outras palavras, uma variável int.
+      </li>
+      <li>
+        %c: imprime o conteúdo da variável com representação ASCII (soletrando:
+        A. S. C. dois Ís), em outras palavras, uma variável char, que representa
+        um caractere.
+      </li>
+      <li>
+        %f imprime o conteúdo da variável com representação com ponto decimal,
+        em outras palavras, uma variável float.
+      </li>
+    </ul>
+
+    <!-- ESTRUTURAS CONDICIONAIS -->
+    <h1>
+      <a id="ESTRUTURAS_CONDICIONAIS"> ESTRUTURAS CONDICIONAIS </a>
+    </h1>
+    <p>
+      A execução de uma tarefa pode ser expressa através de uma sequência de
+      tarefas menores, para coordenar a ordem que esses passos são realizados,
+      de outra forma que não seja uma sequência simples direta, podemos usar
+      estruturas condicionais.
+    </p>
+
+    <!-- A ESTRUTURA CONDICIONAL If -->
+    <h2>
+      <a id="A_ESTRUTURA_CONDICIONAL_IF"> A ESTRUTURA CONDICIONAL IF </a>
+    </h2>
+    <p>
+      As estruturas condicionais permitem expressar regras para que uma tarefa
+      seja realizada ou para que ela seja ignorada. Por exemplo, queremos que um
+      texto apareça na tela se uma variável já declarada for maior que dez.
+      Dessa forma estabelecemos uma condição. Se o valor é maior que dez, então
+      mostre a frase “O valor é maior que 10” na tela. Como já mencionado, na
+      maior parte das linguagens de programação as palavras-chave que formam as
+      expressões são em inglês, logo, chamamos esse tipo de regra de IF (uma
+      tradução direta para o inglês da palavra "se").
+    </p>
+    <p>
+      Para definir uma tarefa que ocorre quando a condição não é atendida,
+      usamos a palavra else (soletrando E. L. S. E.) que representa essa
+      alternativa. Caso você precise adicionar mais uma condição, você deve
+      utilizar o comando 'else if'. Podemos traduzir isso na seguinte frase:
+      (if) se uma condição for verdadeira, faça tal coisa, (else if) se não,
+      teste outra condição e se for verdadeira, faça tal coisa, (else) se
+      nenhuma das condições anteriores for verdadeira, faça tal coisa.
+    </p>
+
+    <!-- A ESTRUTURA CONDICIONAL SWITCH CASE -->
+    <h2>
+      <a id="A_ESTRUTURA_CONDICIONAL_SWITCH_CASE">
+        A ESTRUTURA CONDICIONAL SWITCH CASE
+      </a>
+    </h2>
+    <p>
+      É utilizada para acessar opções baseadas em uma variável que pode ou não
+      ser fornecida pelo usuário. Diferente do if, não é possível acessar faixas
+      de valores (como maior ou menor que 10) apenas o valor exato presente na
+      variável. Você vai definir a condição com uma variável dentro da estrutura
+      switch (soletrando S. W. I. T. C. H.), seguido de vários case (soletrando
+      C. A. S. E.), que literalmente significam: caso x faça tal coisa, caso y
+      faça tal coisa, caso z faça tal coisa, e assim por diante, tantas quantas
+      forem as condições que deseja.
+    </p>
+
+    <!-- EXEMPLOS DE ESTRUTURAS CONDICIONAIS -->
+    <h2>
+      <a id="EXEMPLOS_DE_ESTRUTURAS_CONDICIONAIS">
+        EXEMPLOS DE ESTRUTURAS CONDICIONAIS
+      </a>
+    </h2>
+    <p>
+      Neste exemplo você verá operadores relacionais utilizados dentro dos
+      condicionais.
+    </p>
+    <p>Início do exemplo de condicional if:</p>
+    <p>int num = 0. ponto e vírgula.</p>
+    <p>float numero = 0.5. ponto e vírgula.</p>
+    <p>
+      if. abre parênteses. num. sinal de maior que. numero. fecha parenteses.
+      Abre chaves.
+    </p>
+    <p>
+      printf. abre parênteses. abre aspas duplas. O número inteiro é maior que o número decimal. fecha
+      aspas duplas. fecha parênteses. ponto e vírgula.
+    </p>
+    <p>fecha chaves. comentário. esta foi a instrução 1.</p>
+    <p>else. abre chaves.</p>
+    <p>
+      printf. abre parênteses. abre aspas duplas. O número inteiro não é maior que o numero decimal.
+      fecha aspas duplas. fecha parênteses. ponto e vírgula.
+    </p>
+    <p>fecha chaves. comentário. esta foi a instrução 2.</p>
+    <p>fim do exemplo.</p>
+    <p>Início do código fonte correspondente.</p>
+    <pre>
+      int primeiro_numero = 0;
+      float segundo_numero = 0.5;
+      if(primeiro_numero &gt; segundo_numero)
+      {
+        printf("O número inteiro é maior que o número decimal");
+      }
+      else
+      {
+        printf("O número inteiro não é maior que o numero decimal");
+      }
+    </pre>
+    <p>Fim do código fonte correspondente.</p>
+    <p>
+      O if testará se a variável primeiro_numero é maior que a variável segundo_numero, a instrução
+      1 é realizada, imprimindo a frase “O número inteiro é maior que o número decimal” na tela do
+      computador.
+    </p>
+    <p>
+      Porém, sabemos que não é verdade, pois a variável primeiro_numero tem valor igual a 0.
+    </p>
+    <p>
+      Então, o condicional else será verdadeiro, executando a instrução 2 e
+      imprimindo a frase "O número inteiro não é maior que o numero decimal" na tela do computador.
+    </p>
+    <p>início do exemplo de switch case:</p>
+    <p>switch. abre parênteses. numero. fecha parênteses. abre chaves.</p>
+    <p>case 0, dois pontos.</p>
+    <p>
+      printf. abre parênteses. abre aspas duplas. Achou zero. fecha aspas
+      duplas. fecha parênteses. ponto e vírgula.
+    </p>
+    <p>break ponto e vírgula. comentário. soletrando break: B. R. E. A. K.</p>
+    <p>case 1, dois pontos.</p>
+    <p>
+      printf. abre parênteses. abre aspas duplas. Achou um. fecha aspas duplas.
+      fecha parênteses. ponto e vírgula.
+    </p>
+    <p>break ponto e vírgula;</p>
+    <p>
+      default, dois pontos. comentário. soletrando default D. E. F. A. U. L. T.
+    </p>
+    <p>
+      printf. abre parênteses. abre aspas duplas. Não é zero e também não é um.
+      fecha aspas duplas. fecha parênteses. ponto e vírgula.
+    </p>
+    <p>break ponto e vírgula.</p>
+    <p>
+      fecha chaves. comentário. repare que todos os case estão dentro da mesma
+      chave.
+    </p>
+    <p>fim de exemplo.</p>
+    <p>Início do código fonte correspondente.</p>
+    <pre>
+      switch(numero){
+        case 0:
+          printf(“Achou zero”);
+          break;
+        case 1:
+          printf(“Achou um”);
+          break;
+        default:
+          printf(“Não é zero e também não é um”);
+          break;
+      }
+    </pre>
+    <p>Fim do código fonte correspondente.</p>
+
+    <p>
+      Poderíamos colocar tantos case quanto quiséssemos, e o compilador faria as
+      comparações da variável num com cada case. Neste exemplo a variável num
+      continua com o valor igual a zero, então a instrução de imprimir a frase
+      'Achou zero' seria executada.
+    </p>
+    <p>
+      A instrução break, que apareceu no exemplo, deve ser utilizada depois da
+      instrução de cada case, pois ela tem a função de parar a verificação dos
+      cases que estão abaixo.
+    </p>
+    <p>
+      Então, no exemplo, quando a condição do case 0 foi verdadeira, a instrução
+      do printf foi executada, e logo em seguida o comando break fez com que o
+      compilador saísse da estrutura do switch, sem a necessidade de testar os
+      demais cases.
+    </p>
+
+    <!-- ESTRUTURAS DE REPETIÇÃO -->
+    <h1>
+      <a id="ESTRUTURAS_DE_REPETIÇÃO"> ESTRUTURAS DE REPETIÇÃO </a>
+    </h1>
+    <p>
+      As estruturas de repetição, também chamadas de loop em inglês (ou laços em
+      português), executam a repetição de um conjunto de instruções enquanto uma
+      determinada condição for verdadeira. Exemplo de condições são: enquanto o
+      valor de uma variável for menor que 100, enquanto o valor de uma variável
+      for maior do que o valor de outra variável, enquanto ainda existe um
+      próximo elemento válido numa fila. Neste material você vai acompanhar as
+      duas principais estruturas de repetição, são elas: o "while" e o "for", ou
+      seja, em português, a estrutura de repetição "enquanto" e a estrutura de
+      repetição "para". Cada uma delas tem suas particularidades em termos de
+      funcionamento. É importante ressaltar que os loops são suportados em todas
+      as linguagens de programação modernas. Apesar de que suas implementações e
+      sintaxes possam ser diferentes, a lógica por trás é a mesma.
+    </p>
+
+    <!-- While -->
+    <h2>
+      <a id="While"> While </a>
+    </h2>
+    <p>
+      O comando while, ou, em português, "enquanto", executa uma determinada
+      tarefa enquanto a condição for verdadeira. Neste caso não necessariamente
+      está pré determinada a quantidade de vezes que as instruções serão
+      realizadas, mas que serão realizadas enquanto a condição for verdadeira.
+    </p>
+    <p>
+      Ao escrever um código, fazemos assim: começamos escrevendo while, logo em
+      seguida colocamos entre parênteses a condição, e em seguida colocamos
+      entre chaves tudo o que queremos que seja repetido até que a condição não
+      seja mais satisfeita ou verdadeira.
+    </p>
+    <p>
+      No caso de a repetição conter apenas um único comando, alguns
+      programadores optam por escrever tudo em uma única linha. Ainda sobre
+      pular linhas, é convencional que estejam na primeira linha o while e a
+      condição, lembrando que a condição deve estar obrigatoriamente entre
+      parênteses, e em seguida abrimos chaves e pulamos uma linha para cada
+      comando do bloco de sentenças que deverão ser repetidas, escrevendo o
+      caractere ponto e vírgula no final de cada linha desses comandos. Observe
+      que na primeira linha, que inicia o while, não se usa o caractere ponto e
+      vírgula, apenas no final de cada comando que deverá ser repetido.
+    </p>
+    <p>
+      Apesar de ser convencional entre programadores este pulo de linhas, é algo
+      indiferente na hora de compilar o programa, em outras palavras, é
+      indiferente na hora que o computador executa (usamos também o jargão:
+      “roda”) o seu código. Ou seja, caso deseje, você poderia até escrever tudo
+      em uma mesma linha, desde que respeite a colocação correta do caractere
+      ponto e vírgula.
+    </p>
+    <p>
+      O comando while é uma poderosa estrutura de repetição, pois determina uma
+      condição de parada seguida das instruções a serem executadas, mas não
+      esqueça de realizar, entre as instruções que serão repetidas, a
+      atualização da sua condição, seja por incremento (soma), decremento
+      (subtração) ou outra operação. Caso contrário, seu programa ficará
+      executando este loop infinitamente!
+    </p>
+
+    <!-- FOR -->
+    <h2>
+      <a id="FOR"> FOR </a>
+    </h2>
+    <p>
+      A estrutura "for", ou, em português, a estrutura "para", é a estrutura de
+      repetição mais utilizada. Ela é muito útil quando se sabe quantas vezes a
+      repetição deverá ser executada. A estrutura utiliza uma inicialização, uma
+      condição, e uma atualização. Um exemplo de inicialização: a variável
+      chamada “dia” recebe o valor 1. Exemplo de condição: enquanto o valor da
+      variável chamada dia for menor que 30. Exemplo de atualização: incrementar
+      o valor da variável chamada dia em um.
+    </p>
+    <p>
+      Ao escrever um código, fazemos assim: começamos escrevendo for, em seguida
+      abrimos o parênteses e escrevemos a inicialização (que é um comando de
+      atribuição de valor a uma variável) seguida pelo caractere ponto e
+      vírgula, então escrevemos a condição seguida por outro ponto e vírgula, e
+      então escrevemos a atualização, agora sem o ponto e vírgula e agora
+      fechamos o parênteses. Agora abrimos as chaves, e dentro das chaves
+      escrevemos cada comando que deverá ser repetido enquanto a condição for
+      verdadeira, com um ponto e vírgula depois de cada comando, e
+      convencionalmente pulando uma linha a cada comando, e então fechando as
+      chaves após o último comando que deverá ser repetido. Na execução do
+      programa, tudo que está entre chaves será repetido enquanto a condição for
+      verdadeira, e após cada vez que o último comando desses que estão entre
+      chaves for executado, a parte da atualização que especificamos será
+      executada.
+    </p>
+    <p>
+      Ou seja, lembra de que, no while, falamos para lembrar de realizar, dentre
+      as instruções que serão repetidas, alguma atualização de sua condição?
+      Bem, no for, a atualização já faz parte do comando, por isso não é
+      necessário fazer este passo dentre as instruções que serão repetidas.
+      Sobre tal atualização, o exemplo mais comum em programação possivelmente é
+      o incremento de 1, mas há possibilidade de realizar com incrementos
+      diferentes de 1 ou com alguma outra operação, de acordo com a tarefa que
+      você quer realizar e com a devida lógica.
+    </p>
+
+    <!-- RESUMO DE ESTRUTURAS DE REPETIÇÃO -->
+    <h2>
+      <a id="RESUMO_DE_ESTRUTURAS_DE_REPETIÇÃO">
+        RESUMO DE ESTRUTURAS DE REPETIÇÃO
+      </a>
+    </h2>
+    <p>
+      Sendo assim, agora podemos fazer um breve resumo sobre a diferença entre a
+      estrutura "while" ou, em português, enquanto, e a estrutura "for" ou, em
+      português, para. A estrutura while ou, em português, enquanto, tem entre
+      parênteses somente a condição. A estrutura for ou, em português, para, tem
+      entre parênteses uma inicialização, uma condição e uma atualização. Após
+      isso, ambas seguem com o seguinte: abre-se chaves e entre chaves
+      escrevemos tudo o que queremos que seja repetido enquanto a condição que
+      especificamos for verdadeira, com um caractere ponto e vírgula no final de
+      cada um desses comandos.
+    </p>
+    <p>
+      Em alguns momentos pode parecer que a instrução while faz exatamente a
+      mesma coisa que a estrutura de repetição for. Isso é, de certa forma,
+      verdade. No entanto a instrução while pode ser utilizada para diferentes
+      propósitos quando não se tem previamente a quantidade de repetições que
+      serão executadas, quando se têm variáveis atualizadas dinamicamente, por
+      entrada do usuário, captura de outro ambiente ou sistema, entre outros,
+      mas esse é assunto pra outro momento. Também é possível definir uma
+      condição apenas por verdadeira ou falsa. Lembra do tipo booleano lá do
+      começo do material? Aqui ele é útil para que a contagem de repetições seja
+      diferente do for. Ainda, você poderia determinar que uma tarefa seja
+      executada infinitamente até que o seu programa seja encerrado de outra
+      forma, mas vamos deixar isso para depois.
+    </p>
+
+    <!-- EXEMPLOS DE ESTRUTURAS DE REPETIÇÃO EM LINGUAGEM C -->
+    <h2>
+      <a id="EXEMPLOS_DE_ESTRUTURAS_DE_REPETIÇÃO_EM_LINGUAGEM_C">
+        EXEMPLOS DE ESTRUTURAS DE REPETIÇÃO EM LINGUAGEM C
+      </a>
+    </h2>
+    <p>Soletrando for: F. O. R.</p>
+    <p>início do exemplo:</p>
+    <p>int num. ponto e vírgula.</p>
+    <p>
+      for. abre parênteses. num = 0. ponto e vírgula. num. sinal de menor que.
+      5. ponto e vírgula. num dois sinais de mais juntos. fecha parênteses. abre
+      chaves.
+    </p>
+    <p>
+      printf. abre parênteses. abre aspas duplas. %d fecha aspas duplas.
+      vírgula. sinal de ecomercial. num. fecha parênteses. ponto e vírgula.
+    </p>
+    <p>fecha chaves.</p>
+    <p>fim do exemplo.</p>
+    <p>Início do código fonte correspondente.</p>
+    <pre>
+      int numero; 
+      for(numero = 0; numero &lt; 5; numero++){
+        printf(“%d ”, numero);
+        }
+    </pre>
+    <p>Fim do código fonte correspondente.</p>
+    <p>
+      Essa instrução utiliza a variável num que estava armazenando o valor zero,
+      define que ela será repetida até o valor cinco mas não incluindo o valor
+      cinco, incrementando de um em um. A instrução dentro do laço define que
+      será impresso o valor da variável num à cada passagem pelo laço, e o
+      resultado será: 0, 1, 2, 3, 4.
+    </p>
+    <p>Ao final da instrução a variável num armazena o valor cinco.</p>
+    <p>Soletrando while: W. H. I. L. E.</p>
+    <p>início do exemplo:</p>
+    <p>int num = 5. ponto e vírgula.</p>
+    <p>
+      while. abre parênteses. num. sinal de menor que. 1000. fecha parênteses.
+      abre chaves.
+    </p>
+    <p>
+      printf. abre parênteses. abre aspas duplas. %d fecha aspas duplas.
+      vírgula. sinal de ecomercial num. fecha parênteses. ponto e vírgula.
+    </p>
+    <p>num = num. asterisco. 5. ponto e vírgula.</p>
+    <p>fecha chaves.</p>
+    <p>fim do exemplo.</p>
+    <p>Início do código fonte correspondente.</p>
+    <pre>
+      while(num &lt; 1000){
+        printf(“%d ”, num);
+        num = num * 5;
+      }
+    </pre>
+    <p>Fim do código fonte correspondente.</p>
+    <p>resultado: 5, 25, 125, 625</p>
+    <p>
+      Nesta estrutura de repetição mostramos como seria uma progressão
+      geométrica, começando no valor 5 que a variável num armazenava e
+      multiplicando por 5 a cada repetição (usamos também o jargão: iteração). A
+      condição de parada foi determinada por um operador relacional menor, então
+      enquanto a variável num fosse menor que 1000, a instrução de impressão
+      seria executada chegando ao resultado indicado.
+    </p>
+
+    <!-- EXEMPLOS DE ESTRUTURAS DE REPETIÇÃO EM LINGUAGEM JAVASCRIPT -->
+    <h2>
+      <a id="EXEMPLOS_DE_ESTRUTURAS_DE_REPETIÇÃO_EM_LINGUAGEM_JAVASCRIPT">
+        EXEMPLOS DE ESTRUTURAS DE REPETIÇÃO EM LINGUAGEM JAVASCRIPT
+      </a>
+    </h2>
+    <p>FOR</p>
+    <p>início do exemplo:</p>
+    <p>
+      for. abre parênteses. num. num. sinal de menor que. 5. ponto e vírgula.
+      num. dois sinais de mais juntos. fecha parênteses. abre chaves.
+    </p>
+    <p>
+      console.log. abre parênteses. num. fecha parênteses. ponto e vírgula.
+      comentário.
+    </p>
+    <p>soletrando console.log: C. O. N. S. O. L. E. ponto. L. O. G.</p>
+    <p>fecha chaves.</p>
+    <p>fim do exemplo.</p>
+    <p>Início do código fonte correspondente.</p>
+    <pre>
+      for(num; num &lt; 5; num++){
+        console.log(num);
+      }
+    </pre>
+    <p>Fim do código fonte correspondente.</p>
+    <p>
+      Essa instrução utiliza a variável num que estava armazenando o valor zero,
+      define que ela será iterada até o valor cinco mas não incluindo o valor
+      cinco, incrementando de um em um. A instrução dentro do laço, console.log,
+      funciona como o printf da linguagem C, e define que será impresso o valor
+      da variável num à cada passagem pelo laço.
+    </p>
+    <p>O resultado será: 0, 1, 2, 3, 4.</p>
+    <p>Ao final da instrução a variável num armazena o valor cinco.</p>
+    <p>While</p>
+    <p>início do exemplo:</p>
+    <p>var num= 5. ponto e vírgula.</p>
+    <p>
+      while. abre parênteses. num. sinal de menor que. 1000. fecha parênteses.
+      abre chaves.
+    </p>
+    <p>console.log. abre parênteses. num. fecha parênteses. ponto e vírgula.</p>
+    <p>num = num. asterisco. 5. ponto e vírgula.</p>
+    <p>fecha chaves.</p>
+    <p>fim do exemplo.</p>
+    <p>Início do código fonte correspondente.</p>
+    <pre>
+      while(num &lt; 1000){
+        console.log(num);
+        num = num * 5;
+      }
+    </pre>
+    <p>Fim do código fonte correspondente.</p>
+    <p>resultado: 5, 25, 125, 625</p>
+    <p>
+      Nesta estrutura de repetição mostramos como seria uma progressão
+      geométrica, começando no valor 5 que a variável num armazenava e
+      multiplicando por 5 a cada iteração. A condição de parada foi determinada
+      por um operador relacional menor, então enquanto a variável num fosse
+      menor que mil a instrução de impressão seria executada chegando ao
+      resultado indicado.
+    </p>
+
+    <!-- MÃOS À MASSA, OU MELHOR, MÃOS NO CÓDIGO. -->
+    <h1>
+      <a id="MÃOS_À_MASSA,_OU_MELHOR,_MÃOS_NO_CÓDIGO">
+        MÃOS À MASSA, OU MELHOR, MÃOS NO CÓDIGO
+      </a>
+    </h1>
+    <p>
+      O famoso Hands On fica por sua conta, mas aqui você encontra algumas dicas
+      valiosas.
+    </p>
+    <p>
+      Você pode utilizar um editor de texto de sua preferência e posteriormente
+      compilar seu programa e rodar via terminal, por exemplo. Se isso parecer
+      um pouco assustador para uma primeira vez. Você pode optar por utilizar
+      uma IDE (Integrated Development Environment ou Ambiente de Desenvolvimento
+      Integrado) pois muitas delas possuem compiladores e botões de execução
+      (run) embutidos em suas funcionalidades, isso facilita bastante a nossa
+      vida.
+    </p>
+    <p>
+      Ou ainda você pode experimentar em um compilador online, sem a necessidade
+      de baixar e instalar programas. Os compiladores online são limitados, mas
+      para realizar pequenas tarefas e experimentos são o suficiente.
+    </p>
+    <p>
+      Sugerimos você usar o seguinte compilador online para a linguagem C. 
+      <a href="https://www.programiz.com/c-programming/online-compiler/">
+        Online C Compiler
+      </a>
+      <br>
+      Ou o seguinte compilador online para a linguagem JavasCript. 
+      <a href="https://www.programiz.com/javascript/online-compiler/">
+        Online JavaScript Compiler (Editor)
+      </a>
+    </p>
+    <p>
+      Sua primeira tarefa é implementar o famoso código “Hello World” ou em
+      português “Alô mundo”, consiste em imprimir na tela uma mensagem. Mas este
+      material não falou de operações de entrada e saída, então você deve estar
+      se perguntando: Como vou fazer isso sozinho?
+    </p>
+    <p>Calma, tudo vai dar certo.</p>
+    <p>
+      Se você escolher fazer a atividade em linguagem C primeiramente é
+      importante declarar a biblioteca, conjunto de funções, que você vai querer
+      utilizar. Neste caso queremos uma biblioteca que nos forneça funções de
+      entrada e saída de dados como captura de dados do teclado e impressão de
+      caracteres na tela do computador, por exemplo. Fazemos isso da seguinte
+      maneira: digitando o jogo da velha (hashtag) seguido da palavra include
+      sem espaços entre eles, na sequência pode dar um espaço e entrar com o
+      sinal menor que seguido pela palavra stdio.h (soletrando S. T. D. I. O.
+      ponto. H.) e sinal de maior que, sua primeira linha ficará assim:
+    </p>
+    <p>hashtag. include. menor que. stdio.h. maior que.</p>
+    <p>
+      Jogo da velha (hashtag) seguido da palavra reservada include dizem ao
+      pré-processador que queremos incluir alguma coisa e posteriormente
+      colocamos entre sinais de maior e menor o nome da biblioteca desejada,
+      neste caso utilizado 'stdio.h' que é a biblioteca que define funções para
+      entrada e saída de dados.
+    </p>
+    <p>Prontinho, a primeira parte já foi.</p>
+    <p>
+      Agora precisamos declarar o corpo do programa principal que será executado
+      e para isso declaramos um tipo seguido da palavra reservada 'main'
+      (soletrando main: M. A. I. N.), abre e fecha parênteses seguido de abre e
+      fecha chaves. Em outro momento você vai aprender que pode colocar alguns
+      parâmetros dentro dos parênteses, mas por enquanto vamos deixá-lo vazio.
+      Dentro das chaves é onde você irá escrever as instruções para o seu
+      programa. Até o momento temos a seguinte estrutura:
+    </p>
+    <p>hashtag. include. menor que. stdio.h. maior que.</p>
+    <p>int main. abre e fecha parênteses, abre e fecha chaves.</p>
+    <p>
+      Por padrão acrescentamos uma instrução 'return 0 ponto e vírgula' ao final
+      do programa para dizer que ele encerrou sem erros e está pronta sua
+      primeira atividade, agora é só executar (run) e descobrir o resultado. O
+      seu programa final deve estar da seguinte maneira:
+    </p>
+    <p>hashtag. include. menor que. stdio.h. maior que.</p>
+    <p>int main. abre e fecha parênteses, abre chaves.</p>
+    <p>
+      printf. abre parênteses. abre aspas duplas. Hello World. fecha aspas
+      duplas. fecha parênteses. ponto e vírgula.
+    </p>
+    <p>return 0 ponto e vírgula.</p>
+    <p>fecha chaves.</p>
+    <p>Início do código fonte correspondente.</p>
+    <pre>
+      #include &lt;stdio.h&gt;
+      int main(){
+        printf("Hello World!");
+        return 0;
+      }
+    </pre>
+    <p>Fim do código fonte correspondente.</p>
+    <p>Parabéns! Você oficialmente entrou para o mundo da programação!</p>
+
+    <!-- VAMOS TREINAR UM POUCO MAIS? -->
+    <h1>
+      <a id="VAMOS_TREINAR_UM_POUCO_MAIS?"> VAMOS TREINAR UM POUCO MAIS? </a>
+    </h1>
+    <!-- EXERCÍCIO 1 -->
+    <h2>
+      <a id="EXERCÍCIO_1"> EXERCÍCIO 1 </a>
+    </h2>
+    <p>
+      Dentro do seu programa declare uma variável do tipo numérico que receba o
+      valor um, crie uma estrutura de repetição e imprima na tela a sua variável
+      dez vezes.
+    </p>
+    <p>
+      Você pode ter criado duas variáveis, uma para imprimir e outra para
+      controlar o laço de repetição, assim seu resultado vai imprimir dez vezes
+      o número um. Ou você pode utilizar a mesma variável criada inicialmente
+      para atualizar e imprimir.
+    </p>
+    <p>Qual foi o resultado obtido?</p>
+
+    <!-- EXERCÍCIO 2 -->
+    <h2>
+      <a id="EXERCÍCIO_2"> EXERCÍCIO 2 </a>
+    </h2>
+    <p>
+      Se você conseguiu imprimir os números um a dez, agora é hora de testar uma
+      estrutura condicional e operações aritméticas.
+    </p>
+    <p>
+      Dentro do seu laço de repetição, inclua uma estrutura condicional, aquele
+      If lembra? Você vai dizer para o seu compilador se um número é par imprime
+      'par' e se não, imprime o número mesmo.
+    </p>
+    <p>Dicas</p>
+    <p>Primeira dica</p>
+    <p>
+      Para saber se o número é par basta que o resto da divisão por dois seja
+      zero. E para saber o resto da divisão utilize a operação módulo com o
+      sinal de porcentagem, está lembrando?
+    </p>
+    <p>
+      Então em algum lugar você vai escrever o nome da sua variável porcentagem
+      dois igual igual zero.
+    </p>
+
+    <p>Segunda dica</p>
+    <p>
+      Para imprimir números inteiros você precisa de uma instrução especial
+      dentro dos parênteses do seu print f você vai colocar entre aspas duplas o
+      sinal de porcentagem e a letra d, fechando as aspas mas ainda dentro dos
+      parênteses você adiciona uma vírgula e o nome da variável numérica que
+      carrega o valor que você deseja imprimir.
+    </p>
+    <p>
+      Se sua variável se chama num por exemplo, sua instrução de imprimir seria
+      assim: print f abre parênteses abre aspas duplas % d fecha aspas duplas
+      vírgula num fecha parêntesis.
+    </p>
+    <p>Deixe para colar a resposta depois de bater a cabeça!</p>
+
+    <!-- EXERCÍCIO 3 -->
+    <h2>
+      <a id="EXERCÍCIO_3"> EXERCÍCIO 3 </a>
+    </h2>
+    <p>
+      Escreva um algoritmo que cria duas variáveis com valores inteiros
+      diferentes, então faça com que seu algoritmo troque os valores das
+      variáveis.
+    </p>
+    <p>
+      Exemplo: variável x recebe o valor 5 e variável y recebe o valor 3, ao
+      final do seu programa x deve armazenar o valor 3 e y deve armazenar o
+      valor 5.
+    </p>
+    <p>Dica: você pode utilizar uma variável auxiliar para fazer as trocas.</p>
+
+    <!-- EXERCÍCIO 4 -->
+    <h2>
+      <a id="EXERCÍCIO_4"> EXERCÍCIO 4 </a>
+    </h2>
+    <p>
+      Faça o mesmo do exercício anterior, troque o valor de duas variáveis, mas
+      desta vez sem utilizar uma variável auxiliar.
+    </p>
+    <p>Dica: utilize as operações aritméticas básicas.</p>
+
+    <!-- RESPOSTAS -->
+    <h1>
+      <a id="RESPOSTAS"> RESPOSTAS </a>
+    </h1>
+    <!-- RESPOSTA EXERCÍCIO 2 -->
+    <h2>
+      <a id="RESPOSTA_EXERCÍCIO_2"> RESPOSTA EXERCÍCIO 2 </a>
+    </h2>
+    <p>hashtag include sinal de menor que. s t dio.h sinal de maior que.</p>
+    <p>pula linha.</p>
+    <p>int main. abre e fecha parênteses. abre chaves.</p>
+    <p>pula linha.</p>
+    <p>
+      print f. abre parênteses. abre aspas duplas. Hello World. \n\n. fecha
+      aspas duplas. fecha parênteses. ponto e vírgula.
+    </p>
+    <p>pula linha.</p>
+    <p>int num = 1. ponto e vírgula.</p>
+    <p>pula linha.</p>
+    <p>
+      for. abre parênteses. num. ponto e vírgula. num. sinal de menor que. sinal
+      de igual. 10. ponto e vírgula. ++num. fecha parênteses. abre chaves.
+    </p>
+    <p>pula linha.</p>
+    <p>
+      if. abre parênteses. num%2. dois sinais de igual. 0. fecha parênteses.
+      abre chaves.
+    </p>
+    <p>pula linha.</p>
+    <p>
+      print f. abre parênteses. abre aspas duplas. par. fecha aspas duplas.
+      fecha parênteses. ponto e vírgula.
+    </p>
+    <p>pula linha.</p>
+    <p>fecha chaves.</p>
+    <p>pula linha.</p>
+    <p>
+      else. print f. abre parênteses. abre aspas duplas. %d. fecha aspas duplas.
+      vírgula. ecomercial. num. fecha parênteses. ponto e vírgula.
+    </p>
+    <p>pula linha.</p>
+    <p>fecha chaves.</p>
+    <p>pula linha.</p>
+    <p>
+      print f. abre parênteses. abre aspas duplas. \n fecha aspas duplas. fecha
+      parênteses. ponto e vírgula.
+    </p>
+    <p>pula linha.</p>
+    <p>return 0. ponto e vírgula.</p>
+    <p>pula linha.</p>
+    <p>fecha chaves.</p>
+    <p>Início do código fonte correspondente.</p>
+    <pre>
+      #include &lt;stdio.h&gt;
+      int main(){
+        printf("Hello World!\n\n");
+        int num = 1;
+        for(num; num&lt;=10; ++num){
+          if(num%2 == 0){
+            printf("par ");
+          }
+          else
+          {
+            printf("%d ", num);
+          }
+        }
+        printf("\n");
+        return 0;
+      }
+      </pre>
+      <p>Fim do código fonte correspondente.</p>
+
+    <!-- RESPOSTA EXERCÍCIO 3 -->
+    <h2>
+      <a id="RESPOSTA_EXERCÍCIO_3"> RESPOSTA EXERCÍCIO 3 </a>
+    </h2>
+    <p>hashtag include. sinal de menor que. s t dio.h sinal de maior que.</p>
+    <p>pula linha.</p>
+    <p>int main. abre e fecha parênteses. abre chaves.</p>
+    <p>pula linha.</p>
+    <p>int a = 5. ponto e vírgula.</p>
+    <p>pula linha.</p>
+    <p>int b = 3. ponto e vírgula.</p>
+    <p>pula linha.</p>
+    <p>int aux = 0. ponto e vírgula.</p>
+    <p>
+      print f. abre parênteses. abre aspas duplas. a. dois pontos. %d. dois
+      símbolos de pipe juntos. b. dois pontos. %d \n fecha aspas duplas.
+      vírgula. a. vírgula. b. fecha parênteses. ponto e vírgula.
+    </p>
+    <p>pula linha.</p>
+    <p>aux = a. ponto e vírgula.</p>
+    <p>pula linha.</p>
+    <p>a = b. ponto e vírgula.</p>
+    <p>pula linha.</p>
+    <p>b = aux. ponto e vírgula.</p>
+    <p>pula linha.</p>
+    <p>
+      print f. abre parênteses. abre aspas duplas. a. dois pontos. %d dois
+      símbolos de pipe juntos. b. dois pontos. %d \n fecha aspas duplas.
+      vírgula. a. vírgula. b. fecha parênteses. ponto e vírgula.
+    </p>
+    <p>pula linha.</p>
+    <p>return 0. ponto e vírgula.</p>
+    <p>pula linha.</p>
+    <p>fecha chaves.</p>
+    <p>Início do código fonte correspondente.</p>
+    <pre>
+      #include &lt;stdio.h&gt;
+      int main() {
+        int a = 5;
+        int b =3;
+        int aux =0;
+        printf("a: %d || b: %d\n", a, b);
+        aux = a;
+        a = b;
+        b = aux;
+        printf("a: %d || b: %d\n", a, b);
+        return 0;
+      }
+    </pre>
+    <p>Fim do código fonte correspondente.</p>
+
+    <!-- RESPOSTA EXERCÍCIO 4 -->
+    <h2>
+      <a id="RESPOSTA_EXERCÍCIO_4"> RESPOSTA EXERCÍCIO 4 </a>
+    </h2>
+    <p>hashtag include. sinal de menor que. s t dio.h sinal de maior que.</p>
+    <p>pula linha.</p>
+    <p>int main. abre e fecha parênteses. abre chaves.</p>
+    <p>pula linha.</p>
+    <p>int a = 5. ponto e vírgula.</p>
+    <p>pula linha.</p>
+    <p>int b = 3. ponto e vírgula.</p>
+    <p>pula linha.</p>
+    <p>
+      print f. abre parênteses. abre aspas duplas. a. dois pontos. %d dois
+      símbolos de pipe juntos. b. dois pontos. %d \n fecha aspas duplas.
+      vírgula. a. vírgula. b. fecha parênteses. ponto e vírgula.
+    </p>
+    <p>pula linha.</p>
+    <p>a = a + b. ponto e vírgula.</p>
+    <p>pula linha.</p>
+    <p>b = a - b. ponto e vírgula.</p>
+    <p>pula linha.</p>
+    <p>a = a - b. ponto e vírgula.</p>
+    <p>pula linha.</p>
+    <p>
+      print f. abre parênteses. abre aspas duplas. a. dois pontos. %d dois
+      símbolos de pipe juntos. b. dois pontos. %d \n fecha aspas duplas.
+      vírgula. a. vírgula. b. fecha parênteses. ponto e vírgula.
+    </p>
+    <p>pula linha.</p>
+    <p>return 0. ponto e vírgula.</p>
+    <p>pula linha.</p>
+    <p>fecha chaves.</p>
+
+    <p>Início do código fonte correspondente.</p>
+    <pre>
+      #include &lt;stdio.h&gt;
+      int main() {
+        int a = 5;
+        int b =3;
+        printf("a: %d || b: %d\n", a, b);
+        a = a + b;
+        b = a - b;
+        a = a - b;
+        printf("a: %d || b: %d\n", a, b);
+        return 0;
+      }
+    </pre>
+    <p>Fim do código fonte correspondente.</p>
+
+    <a href="#MENU">VOLTAR PARA O MENU</a>
+    <h2><a id="#INFO">SOBRE ESTE TRABALHO</a></h2>
+    <p>
+      Este trabalho foi desenvolvido como atividade de extensão da mátéria de Acessibilidade
+      e Inclusão Digital ministrada na UTFPR em 2021.
+    </p>
+    <p>Coordenador: Leonelo Dell Anhol Almeida</p>
+    <p>
+      Equipe Executora: Ana P. D. S. Marques; Ane C. Simoes; Ariadne C. C. Piasson; Cristiane Klein;
+      Guilmour H. D. Rossi; Isadora C. Goncalves; Ivan B. Junior; Matheus D. A. Gimenes; Pedro R. Splendore;
+      Saulo G. D. A. Bergamo; Viviane L. B. M. D. Souza
+    </p>
+    <p>
+      Esta obra está licenciada como 
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+        Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional
+      </a>
+      <br>
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+        <img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+      </a>
+    </p>
+  </body>
+</html>
